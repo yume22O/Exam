@@ -1,0 +1,175 @@
+/* ===== 全体レイアウト・背景 ===== */
+body {
+  font-family: "Meiryo", "Arial", sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* ===== ヘッダー（タイトルバー） ===== */
+.header-bar {
+  width: 100%;
+  background: #e8f0fb;
+  border-bottom: 1px solid #dbe6f7;
+  padding: 20px 0 10px 0;
+  box-sizing: border-box;
+  margin-bottom: 18px;
+}
+.header-inner {
+  width: 85%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.header-title {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #2c3e50;
+}
+.header-user {
+  font-size: 0.97em;
+  color: #444;
+}
+.header-logout {
+  color: #007bff;
+  margin-left: 10px;
+  font-size: 0.95em;
+  text-decoration: none;
+}
+.header-logout:hover {
+  text-decoration: underline;
+}
+
+/* ===== メインコンテナ ===== */
+.main-content {
+  width: 85%;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 420px;
+  display: flex;
+}
+
+/* ===== サイドメニュー ===== */
+.menu-side {
+  width: 120px;
+  padding-top: 12px;
+  margin-right: 24px;
+  flex-shrink: 0;
+}
+.menu-side a {
+  display: block;
+  margin-bottom: 14px;
+  color: #2c57a0;
+  font-size: 14px;
+  text-decoration: underline;
+  transition: color 0.14s;
+}
+.menu-side a:hover {
+  color: #0056b3;
+}
+
+/* ===== メニュー中央部 ===== */
+.menu-center {
+  flex: 1;
+  background: none;
+}
+
+/* ===== メニュータイトル ===== */
+.menu-title {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  color: #444;
+  border-bottom: 2px solid #e3e8f0;
+  padding-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+/* ===== メニューカードエリア ===== */
+.menu-cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+/* ===== メニューカード ===== */
+.menu-card {
+  min-width: 220px;
+  min-height: 120px;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(90,90,90,0.13);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.16s;
+  background: #fff;
+  color: #444;
+  position: relative;
+}
+.menu-card.menu-student {
+  background: #e4c4c4;
+}
+.menu-card.menu-score {
+  background: #d6e6cf;
+}
+.menu-card.menu-subject {
+  background: #c8d1e8;
+}
+.menu-card:hover {
+  box-shadow: 0 8px 28px rgba(90,90,90,0.18);
+}
+
+/* ===== 各カード内テキスト ===== */
+.menu-card a {
+  color: #2c57a0;
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  display: block;
+}
+.menu-card.menu-student a {
+  color: #b03939;
+  font-size: 18px;
+}
+.menu-card.menu-score a {
+  color: #248d5c;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 6px 0 0 0;
+}
+.menu-card.menu-score .menu-score-title {
+  color: #2c6a2f;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.menu-card.menu-subject a {
+  color: #363682;
+  font-size: 18px;
+}
+
+/* ===== フッター ===== */
+.footer-bar {
+  width: 100%;
+  background: #e6e6e6;
+  color: #888;
+  text-align: center;
+  padding: 18px 0 5px 0;
+  font-size: 13px;
+  margin-top: 50px;
+  border-top: 1px solid #dadada;
+}
+
+@media (max-width: 900px) {
+  .header-inner, .main-content { width: 98%; max-width: none; }
+  .main-content { flex-direction: column; }
+  .menu-side { width: 100%; margin-right: 0; padding-bottom: 16px; border-bottom: 1px solid #eee; }
+  .menu-cards { flex-direction: column; gap: 16px; margin-left: 0; }
+}
