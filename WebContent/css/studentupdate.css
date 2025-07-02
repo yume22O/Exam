@@ -1,0 +1,52 @@
+/* ===== セクション全体 ===== */
+section {
+  background: #fcfcfc;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(100,120,150,0.08);
+  padding: 20px 24px 28px 24px;
+  margin: 18px 0 0 0;
+}
+form div {
+  margin-bottom: 15px; /* 下に15pxの間隔をあける */
+}
+
+/* ===== タイトル行 ===== */
+section > h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  background: #e8f0fb;
+  padding: 12px 30px;
+  margin: -20px -24px 18px -24px;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid #d3e2f2;
+  letter-spacing: 1px;
+}
+
+/* ===== 入学年度、学生番号 ===== */
+input[readonly] {
+  border: none;
+  background-color: transparent; /* 背景透明 */
+}
+
+
+/* ===== 氏名、クラス===== */
+#name,
+#class_num{
+  width: 100%;
+  padding: 6px 8px;   /* 縦:6px, 横:8px の内側余白 */
+  border: 1px solid #e7e7e7;   /* 枠線の色 */
+  border-radius: 6px;   /* 角丸 */
+}
+
+/* ===== 在学中 ===== */
+input[type="checkbox"] {
+  accent-color: blue;
+  cursor: pointer;
+}
+
+/* ===== p ===== */
+p{
+	text-align: center;
+    background-color: rgba(50,205,50,0.5); /* 透明度50% */
+}
